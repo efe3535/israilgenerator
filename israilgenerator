@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 replace = "ISRAIL"
-text = input('Israillenecek yazi:\t\t').upper()
+text = input(f'{replace}lenecek yazi:\t\t').upper()
 result = ""
 
 for char in text:
