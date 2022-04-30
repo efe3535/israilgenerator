@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+
+replace = "ISRAIL"
+text = input('Israillenecek yazi:\t\t').upper()
+result = ""
+
+for char in text:
+    if char.lower() in replace.lower():
+        replaceindex = list(replace.lower()).index(char.lower())
+        result += " " * (len(replace) - len(replace[0:replaceindex]) - 1) + replace[0:replaceindex] + " " + text[text.index(replace[replaceindex])] + " " + replace[replaceindex+1:len(replace)] + "\n"
+    
+    elif char.lower() not in replace.lower():
+        result+=" " * len(replace) + char+"\n"
+
+print(result)
+print(f"\nBen '{text}' demem aga.")
